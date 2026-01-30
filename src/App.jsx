@@ -153,7 +153,7 @@ export default function App() {
               </div>
               <div>
                 <div className="text-sm font-bold text-indigo-400">Frontend</div>
-                <div className="font-medium">HTML/CSS · JavaScript · React.js · Tailwind CSS</div>
+                <div className="font-medium">React.js · JavaScript · HTML/CSS · Tailwind CSS</div>
               </div>
               <div>
                 <div className="text-sm font-bold text-indigo-400">Database</div>
