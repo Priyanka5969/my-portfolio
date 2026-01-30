@@ -22,7 +22,7 @@ export default function App() {
 
   const projects = [
     { id: 1, title: "TicketX — Event Booking Platform", desc: "Backend ticketing system with Stripe, Redis caching, and webhook-driven booking automation.", tags: ["Node.js", "Express", "MongoDB", "Stripe"], github: "https://github.com/Priyanka5969/ticketx-backend/", live: "#", img: "/project-ticketx.png" },
-    { id: 2, title: "Mini-Jira — Task Management", desc: "Kanban-style task system with Redux Toolkit, real-time analytics, and responsive UI.", tags: ["React", "Redux", "Node.js", "Tailwind"], github: "https://github.com/Priyanka5969/mini-jira/", live: "#", img: "/project-minijira.png" },
+    { id: 2, title: "Mini-Jira — Task Management", desc: "Kanban-style task system with Redux Toolkit, real-time analytics, and responsive UI.", tags: ["React", "Redux", "Node.js", "Tailwind"], github: "https://github.com/Priyanka5969/mini-jira/", live: "https://mini-jira.netlify.app/login", img: "/project-minijira.png" },
     { id: 3, title: "Youtube Clone", desc: "A Front-End YouTube clone using the YouTube API to replicate core YouTube features.", tags: ["React.js", "TailwindCss", "YouTube API"], github: "https://github.com/Priyanka5969/Youtube-clone", live: "#", img: "/youtube-clone.png" },
   ];
 
@@ -33,23 +33,21 @@ export default function App() {
       location: "Navi Mumbai, India",
       period: "Aug 2023 – Present",
       bullets: [
-        "Delivered backend features across JioGames, SCI, and JioStream, powering real-time video workflows, livestream automation, and large-scale content delivery.",
-        "Integrated HLS playlist modification and optimized transcoding workflows, reducing latency and improving playback stability.",
-        "Implemented transcription pipeline using JWT (public-private key) and automated workflows for livestream videos.",
-        "Built Schedule Livestream and metadata APIs, enabling creators to manage upcoming and past streams efficiently.",
-        "Improved database performance through MongoDB query optimization, projections, and caching (JioStream).",
-        "Built playUrl API for mediaSources and optimized media query logic for faster asset fetches.",
-        "Implemented features like Engagement Key (Namo), Static AdSpots (JioGames Admin), and tenant/plan expiry logic.",
-        "Developed newsletter delivery logic: ranking, scheduled dispatch, subscriber/unsubscriber handling.",
-        "Fixed critical bugs across NIC, Studio-SuperAdmin, Namo, and SCI — covering notifications, OTP caching, status updates, video playback issues, and CDN caching.",
-        "Provisioned Redis Sentinel setup and assisted infra setup for dev/stage environments.",
-        "Automated AWS/GCP deployment scripts and handled Dev/Stage/Production deployments.",
-        "Improved system reliability by addressing Docker vulnerabilities, optimizing storage, clearing logs, and monitoring container health.",
-        "Created load test cases (SCI) for performance benchmarking and backend stability.",
-        "Contributed to Matomo analytics configuration and implemented real-time views/likes tracking for media.",
-        "Developed multi-mode playlist workflows (manual, conditional, and story-based) with Akamai CDN.",
-        "Reduced metadata API response times by 50% using Redis caching, MongoDB projections, and async parallel querying.",
-        "Automated disk clean-up and log rotation using cron/logrotate for HLS segments and transcoder logs, reducing VM memory usage by ~20%.",
+        <>Worked on large-scale video streaming and content management platforms, handled <span className="text-indigo-400">millions of users</span>.</>,
+        <>Built and optimized <span className="text-indigo-400">HLS-based</span> streaming pipelines with adaptive bitrate support (480p - 1080p), improving playback stability and reducing buffering.</>,
+        <>Migrated live streaming infrastructure from NGINX RTMP to <span className="text-indigo-400">SRS</span>, reducing streaming latency by <span className="text-indigo-400">~50%</span> and enabling ultra-low latency playback (1–2s).</>,
+        <>Designed <span className="text-indigo-400">multi-tenant</span> backend architecture with subscription plans, feature flags, and tenant lifecycle management.</>,
+        <>Developed schedule livestream APIs, playlist management, and media metadata handling.</>,
+        <>Built media and playUrl APIs with optimized <span className="text-indigo-400">MongoDB</span> queries and CDN integration, improving response time by <span className="text-indigo-400">~40%</span>.</>,
+        <>Implemented real-time analytics APIs for views, likes, and engagement tracking using <span className="text-indigo-400">Redis</span> caching.</>,
+        <>Automated transcription workflows using <span className="text-indigo-400">JWT</span> authentication and <span className="text-indigo-400">GCP Pub/Sub</span>, reducing manual processing by <span className="text-indigo-400">80%</span>.</>,
+        <>Developed Super Admin APIs for tenant management, feature control, and role-based access.</>,
+        <>Built <span className="text-indigo-400">React</span> components for media uploads, tenant configuration, and admin dashboards.</>,
+        <>Improved system reliability by resolving production issues related to streaming, CDN caching, authentication, and notifications, maintaining <span className="text-indigo-400">99.9% uptime</span>.</>,
+        <>Containerized services using <span className="text-indigo-400">Docker</span> and supported Redis setup, log management, and environment optimization.</>,
+        <>Actively supported production deployments, bug fixes, and performance tuning for live systems.</>,
+        <>Developed a <span className="text-indigo-400">Three.js</span>-based UI POC for JioGames to visualize interactive game banners and content cards, implementing basic camera controls, animations, and responsive layouts to enhance user engagement.</>,
+        <>Built a Three.js POC to visualize transcription output, rendering timed captions and content overlays.</>,
       ],
     },
     {
@@ -62,8 +60,8 @@ export default function App() {
   ];
 
   const professionalProjects = [
-    { id: "jio-stream", title: "Jio Stream", desc: "A video commerce platform for creating shoppable videos for brands & influencers.", tags: ["Express.js", "Node.js", "Next.js", "MongoDB", "Redis", "TailwindCss", "RabbitMq", "Docker", "GCP"], img: "/jio-stream.png" },
-    { id: "jio-watch", title: "Jio Watch", desc: "JioGames Watch is a streaming SaaS platform for gameplay and livestreams.", tags: ["Express.js", "Node.js", "React.js", "MongoDB", "Redis", "TailwindCss", "RabbitMq", "Docker", "GCP"], img: "/jio-watch.png" },
+    { id: "jio-stream", title: "Jio Stream", desc: "A video commerce platform for creating shoppable videos for brands & influencers.", tags: ["Express.js", "Node.js", "Next.js", "MongoDB", "Redis", "TailwindCss", "RabbitMq", "Docker", "GCP"], img: "/jiostream.png" },
+    { id: "jio-watch", title: "Jio Watch", desc: "JioGames Watch is a streaming SaaS platform for gameplay and livestreams.", tags: ["Express.js", "Node.js", "React.js", "MongoDB", "Redis", "TailwindCss", "RabbitMq", "Docker", "GCP"], img: "/jiowatch.png" },
   ];
 
   const allTags = ["all", ...new Set(projects.flatMap((p) => p.tags))];
@@ -206,11 +204,11 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {professionalProjects.map((p) => (
               <div key={p.id} className="bg-slate-900/30 p-4 rounded-xl border border-slate-700/30">
-                <div className="h-44 bg-slate-800 rounded-lg overflow-hidden">
+                <div className="min-h-44 bg-slate-800 rounded-lg overflow-hidden flex items-center justify-center">
                   <img 
                     src={p.img}
                     alt={p.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto max-h-64 object-contain"
                   />
                 </div>
 
@@ -228,18 +226,20 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((p) => (
               <article key={p.id} className="bg-slate-900/30 rounded-xl p-4 border border-slate-700/30 hover:shadow-xl transition-shadow">
-                <div className="h-40 rounded-lg overflow-hidden bg-slate-800">
+                <div className="min-h-40 rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center">
                   <img 
                     src={p.img}
                     alt={p.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto max-h-48 object-contain"
                   />
                 </div>
                 <h3 className="mt-3 font-semibold text-lg">{p.title}</h3>
                 <p className="mt-2 text-base text-slate-300">{p.desc}</p>
                 <div className="mt-3 flex flex-wrap gap-2">{p.tags.map((t) => (<span key={t} className="text-xs px-2 py-1 rounded-full bg-slate-700/30">{t}</span>))}</div>
                 <div className="mt-4 flex gap-2">
-                  <a href={p.live} className="text-sm px-3 py-1 rounded-md bg-slate-700/30">Live</a>
+                  {p.live && p.live !== "#" && (
+                    <a href={p.live} className="text-sm px-3 py-1 rounded-md bg-slate-700/30">Live</a>
+                  )}
                   <a href={p.github} className="text-sm px-3 py-1 rounded-md bg-slate-700/30">Github</a>
                 </div>
               </article>
