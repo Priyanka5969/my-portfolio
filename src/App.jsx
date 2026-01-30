@@ -8,7 +8,6 @@ import React, { useState } from "react";
 export default function App() {
   const [filter, setFilter] = useState("all");
   const [showCli, setShowCli] = useState(false);
-  const [expanded, setExpanded] = useState(null);
 
   const profile = {
     name: "Priyanka Anil Vishe",
@@ -98,52 +97,52 @@ export default function App() {
       )}
 
       {/* Header */}
-      <header className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+      <header className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between">
         <div>
-          <a href="#" className="text-2xl font-extrabold tracking-tight"><span className="text-indigo-400">Priyanka</span> Vishe</a>
-          <div className="text-sm text-slate-400">SDE · Node.js · Streaming</div>
+          <a href="#" className="text-xl sm:text-2xl font-extrabold tracking-tight"><span className="text-indigo-400">Priyanka</span> Vishe</a>
+          <div className="text-xs sm:text-sm text-slate-400">SDE · Node.js · Streaming</div>
         </div>
 
-        <nav className="space-x-4 hidden md:flex items-center">
-          <a href="#experience" className="text-sm hover:text-white">Experience</a>
-          <a href="#professional-projects" className="text-sm hover:text-white">Professional Projects</a>
-          <a href="#projects" className="text-sm hover:text-white">Personal Projects</a>
-          <a href="#contact" className="text-sm hover:text-white">Contact</a>
+        <nav className="space-x-2 sm:space-x-4 hidden md:flex items-center">
+          <a href="#experience" className="text-xs sm:text-sm hover:text-white">Experience</a>
+          <a href="#professional-projects" className="text-xs sm:text-sm hover:text-white">Professional Projects</a>
+          <a href="#projects" className="text-xs sm:text-sm hover:text-white">Personal Projects</a>
+          <a href="#contact" className="text-xs sm:text-sm hover:text-white">Contact</a>
         </nav>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 md:py-10 grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
 
         {/* Hero - left image, right text */}
-        <section className="lg:col-span-2 bg-slate-900/40 p-8 pt-8 rounded-2xl shadow-lg border border-slate-700/40 overflow-visible">
+        <section className="lg:col-span-2 bg-slate-900/40 p-4 sm:p-6 md:p-8 pt-4 sm:pt-6 md:pt-8 rounded-2xl shadow-lg border border-slate-700/40 overflow-visible">
   {/* Row: Image + Heading */}
-  <div className="flex items-start gap-10">
-    <div className="w-60 h-60 rounded-full overflow-hidden shadow-xl shadow-cyan-500/10 flex-shrink-0 border-4 border-slate-800">
+  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 md:gap-10">
+    <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 rounded-full overflow-hidden shadow-xl shadow-cyan-500/10 flex-shrink-0 border-4 border-slate-800">
       <img src="/my-photo.png" alt="Priyanka Vishe" className="w-full h-full object-cover rounded-full" />
     </div>
 
-    <div className="flex flex-col justify-center pt-6">
-      <h1 className="text-4xl font-extrabold leading-tight">
+    <div className="flex flex-col justify-center text-center sm:text-left">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
         Hi <span className="inline-block">👋</span><br/>
         I am <span className="text-indigo-400">Priyanka Anil Vishe</span><br/>
-        <span className="text-cyan-400">Software Development Engineer</span>
+        <span className="text-cyan-400 text-lg sm:text-xl md:text-2xl">Software Development Engineer</span>
       </h1>
     </div>
   </div>
 
   {/* Summary BELOW circle */}
-  <p className="text-slate-300 mt-10 max-w-2xl">{profile.summary}</p>
+  <p className="text-slate-300 mt-6 sm:mt-8 md:mt-10 text-sm sm:text-base max-w-2xl">{profile.summary}</p>
 
   {/* Buttons */}
-  <div className="mt-6 flex flex-wrap gap-3">
-    <a href={"mailto:" + profile.email} className="px-4 py-2 rounded-md bg-[#2A2A2A] hover:bg-[#3A3A3A]">Email</a>
-    <a href="#professional-projects" className="px-4 py-2 rounded-md bg-[#2A2A2A] hover:bg-[#3A3A3A]">Projects</a>
-    <a href="#contact" className="px-4 py-2 rounded-md bg-[#2A2A2A] hover:bg-[#3A3A3A]">Contact</a>
+  <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3 justify-center sm:justify-start">
+    <a href={"mailto:" + profile.email} className="px-3 sm:px-4 py-2 rounded-md bg-[#2A2A2A] hover:bg-[#3A3A3A] text-sm sm:text-base">Email</a>
+    <a href="#professional-projects" className="px-3 sm:px-4 py-2 rounded-md bg-[#2A2A2A] hover:bg-[#3A3A3A] text-sm sm:text-base">Projects</a>
+    <a href="#contact" className="px-3 sm:px-4 py-2 rounded-md bg-[#2A2A2A] hover:bg-[#3A3A3A] text-sm sm:text-base">Contact</a>
   </div>
 </section>
 
         {/* Sidebar */}
-        <aside className="bg-slate-900/40 p-6 rounded-2xl border border-slate-700/40 space-y-6">
+        <aside className="bg-slate-900/40 p-4 sm:p-6 rounded-2xl border border-slate-700/40 space-y-4 sm:space-y-6">
           <div>
             <h4 className="text-sm text-slate-400 uppercase">My skills</h4>
             <div className="mt-3 grid grid-cols-1 gap-3 text-base text-slate-300">
@@ -175,35 +174,31 @@ export default function App() {
         </aside>
 
         {/* Experience (full width cards) */}
-        <section id="experience" className="lg:col-span-3 mt-8">
-          <h2 className="text-2xl font-bold mb-4 text-cyan-400">Experience</h2>
-          <div className="grid grid-cols-1 gap-6">
+        <section id="experience" className="lg:col-span-3 mt-6 sm:mt-8">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 text-cyan-400">Experience</h2>
+          <div className="grid grid-cols-1 gap-4 sm:gap-6">
             {experience.map((e, idx) => (
-              <div key={idx} className="bg-slate-900/30 p-4 rounded-xl border border-slate-700/30">
-                <button onClick={() => setExpanded(expanded === idx ? null : idx)} className="w-full text-left flex items-center justify-between">
-                  <div>
-                    <div className="font-semibold">{e.role}</div>
-                    <div className="text-sm text-slate-400">{e.org} · {e.location}</div>
-                  </div>
-                  <span className={`transition-transform ${expanded === idx ? 'rotate-180' : ''}`}>▼</span>
-                </button>
-
-                <div className={`transition-all overflow-hidden ${expanded === idx ? 'max-h-[800px] opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
-                  <ul className="list-disc list-inside text-base text-slate-300 space-y-1">
-                    {e.bullets.map((b, i) => (<li key={i}>{b}</li>))}
-                  </ul>
+              <div key={idx} className="bg-slate-900/30 p-3 sm:p-4 rounded-xl border border-slate-700/30">
+                <div className="mb-3">
+                  <div className="font-semibold text-lg">{e.role}</div>
+                  <div className="text-sm text-slate-400">{e.org} · {e.location}</div>
+                  <div className="text-sm text-slate-500 mt-1">{e.period}</div>
                 </div>
+
+                <ul className="list-disc list-inside text-sm sm:text-base text-slate-300 space-y-1 sm:space-y-2">
+                  {e.bullets.map((b, i) => (<li key={i}>{b}</li>))}
+                </ul>
               </div>
             ))}
           </div>
         </section>
 
         {/* Professional Projects */}
-        <section id="professional-projects" className="lg:col-span-3 mt-10">
-          <h2 className="text-2xl font-bold mb-6 text-cyan-400">Professional Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section id="professional-projects" className="lg:col-span-3 mt-6 sm:mt-8 md:mt-10">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-cyan-400">Professional Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {professionalProjects.map((p) => (
-              <div key={p.id} className="bg-slate-900/30 p-4 rounded-xl border border-slate-700/30">
+              <div key={p.id} className="bg-slate-900/30 p-3 sm:p-4 rounded-xl border border-slate-700/30">
                 <div className="min-h-44 bg-slate-800 rounded-lg overflow-hidden flex items-center justify-center">
                   <img 
                     src={p.img}
@@ -212,8 +207,8 @@ export default function App() {
                   />
                 </div>
 
-                <h3 className="mt-3 font-semibold text-lg">{p.title}</h3>
-                <p className="mt-2 text-base text-slate-300">{p.desc}</p>
+                <h3 className="mt-3 font-semibold text-base sm:text-lg">{p.title}</h3>
+                <p className="mt-2 text-sm sm:text-base text-slate-300">{p.desc}</p>
                 <div className="mt-3 flex flex-wrap gap-2">{p.tags.map((t) => (<span key={t} className="text-xs px-2 py-1 rounded-full bg-slate-700/30">{t}</span>))}</div>
               </div>
             ))}
@@ -221,11 +216,11 @@ export default function App() {
         </section>
 
         {/* Personal Projects */}
-        <section id="projects" className="lg:col-span-3 mt-10">
-          <h2 className="text-2xl font-bold mb-4 text-cyan-400">Personal Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section id="projects" className="lg:col-span-3 mt-6 sm:mt-8 md:mt-10">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 text-cyan-400">Personal Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filtered.map((p) => (
-              <article key={p.id} className="bg-slate-900/30 rounded-xl p-4 border border-slate-700/30 hover:shadow-xl transition-shadow">
+              <article key={p.id} className="bg-slate-900/30 rounded-xl p-3 sm:p-4 border border-slate-700/30 hover:shadow-xl transition-shadow">
                 <div className="min-h-40 rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center">
                   <img 
                     src={p.img}
@@ -233,14 +228,14 @@ export default function App() {
                     className="w-full h-auto max-h-48 object-contain"
                   />
                 </div>
-                <h3 className="mt-3 font-semibold text-lg">{p.title}</h3>
-                <p className="mt-2 text-base text-slate-300">{p.desc}</p>
+                <h3 className="mt-3 font-semibold text-base sm:text-lg">{p.title}</h3>
+                <p className="mt-2 text-sm sm:text-base text-slate-300">{p.desc}</p>
                 <div className="mt-3 flex flex-wrap gap-2">{p.tags.map((t) => (<span key={t} className="text-xs px-2 py-1 rounded-full bg-slate-700/30">{t}</span>))}</div>
                 <div className="mt-4 flex gap-2">
                   {p.live && p.live !== "#" && (
-                    <a href={p.live} className="text-sm px-3 py-1 rounded-md bg-slate-700/30">Live</a>
+                    <a href={p.live} className="text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-md bg-slate-700/30">Live</a>
                   )}
-                  <a href={p.github} className="text-sm px-3 py-1 rounded-md bg-slate-700/30">Github</a>
+                  <a href={p.github} className="text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-md bg-slate-700/30">Github</a>
                 </div>
               </article>
             ))}
@@ -248,26 +243,26 @@ export default function App() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="lg:col-span-3 mt-8 bg-slate-900/30 p-6 rounded-xl border border-slate-700/30">
-          <h2 className="text-2xl font-bold mb-4 text-cyan-400">Contact</h2>
-          <p className="text-slate-300">If you want to reach out for interviews, collaborations, or freelance work — send me a note.</p>
+        <section id="contact" className="lg:col-span-3 mt-6 sm:mt-8 bg-slate-900/30 p-4 sm:p-6 rounded-xl border border-slate-700/30">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 text-cyan-400">Contact</h2>
+          <p className="text-sm sm:text-base text-slate-300">If you want to reach out for interviews, collaborations, or freelance work — send me a note.</p>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="md:col-span-2">
               <form action={"mailto:" + profile.email} method="POST" encType="text/plain" className="space-y-3">
-                <input name="name" placeholder="Your name" className="w-full p-3 rounded-md bg-slate-800 border border-slate-700" />
-                <input name="email" placeholder="Email" className="w-full p-3 rounded-md bg-slate-800 border border-slate-700" />
-                <textarea name="message" placeholder="Message" rows={4} className="w-full p-3 rounded-md bg-slate-800 border border-slate-700" />
-                <button type="submit" className="px-5 py-2 rounded-md bg-indigo-500">Send message</button>
+                <input name="name" placeholder="Your name" className="w-full p-2 sm:p-3 rounded-md bg-slate-800 border border-slate-700 text-sm sm:text-base" />
+                <input name="email" placeholder="Email" className="w-full p-2 sm:p-3 rounded-md bg-slate-800 border border-slate-700 text-sm sm:text-base" />
+                <textarea name="message" placeholder="Message" rows={4} className="w-full p-2 sm:p-3 rounded-md bg-slate-800 border border-slate-700 text-sm sm:text-base" />
+                <button type="submit" className="px-4 sm:px-5 py-2 rounded-md bg-indigo-500 text-sm sm:text-base">Send message</button>
               </form>
             </div>
             <div className="flex flex-col gap-3">
-              <div className="bg-slate-800 p-4 rounded-md">
-                <div className="text-slate-400 text-sm">Email</div>
-                <div className="font-medium">{profile.email}</div>
+              <div className="bg-slate-800 p-3 sm:p-4 rounded-md">
+                <div className="text-slate-400 text-xs sm:text-sm">Email</div>
+                <div className="font-medium text-sm sm:text-base">{profile.email}</div>
               </div>
-              <div className="bg-slate-800 p-4 rounded-md">
-                <div className="text-slate-400 text-sm">Phone</div>
-                <div className="font-medium">{profile.phone}</div>
+              <div className="bg-slate-800 p-3 sm:p-4 rounded-md">
+                <div className="text-slate-400 text-xs sm:text-sm">Phone</div>
+                <div className="font-medium text-sm sm:text-base">{profile.phone}</div>
               </div>
             </div>
           </div>
